@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
@@ -10,11 +11,9 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build error simulation!
-      - exit 1
       - ng build --prod
-    finally:
-      - echo This is the finally block execution!
+      - echo "Build completed."
+
 artifacts:
   base-directory: dist/my-angular-project
   files:
